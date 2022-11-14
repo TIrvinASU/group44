@@ -80,7 +80,7 @@ public class StoreViewController implements Initializable {
                     String text = "test";
                     setText(null);
                 } else {
-                    setText("Order: " + String.valueOf(order.getId() + 1));
+                    setText("Order: " + String.valueOf(order.getId() ));
                 }
             }
         });
@@ -98,7 +98,7 @@ public class StoreViewController implements Initializable {
                 if (empty) {
                     setText(null);
                 } else {
-                    setText("Order: " + String.valueOf(order.getId() + 1));
+                    setText("Order: " + String.valueOf(order.getId()));
                 }
             }
         });
