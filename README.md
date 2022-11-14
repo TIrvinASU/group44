@@ -10,9 +10,9 @@ This is the list of acceptable ASU ids: noeln, tirvin, dhruv, sexyboi
 Any other ASU id will be rejected.
 Obviously, in production, all ASU ids will be acceptable.
 
-For the installation of intellij by JetBrains : https://www.jetbrains.com/idea/
-After downloading intelij from the website provided, we have followed the documentation below for setting up the JavaFx on intelij using JDK19.
-https://openjfx.io/openjfx-docs/
+For the installation of intellij by [JetBrains] (https://www.jetbrains.com/idea/)
+After downloading intelij from the website provided, we have followed the [documentation] (https://openjfx.io/openjfx-docs/) for setting up the JavaFx on intelij using JDK19.
+
 
 # Team Member
 Abhinav Sharma, Anirudh Ramasubramanian, Dhruv Samdani, Noel Ngu, Trevor Irvin, Woojeh Chung
