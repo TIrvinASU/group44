@@ -113,4 +113,12 @@ public class StoreViewController implements Initializable {
     public void readyToCook(ActionEvent actionEvent) {
         setOrderReadyToCook();
     }
+    
+    public void setOrderReady() {
+        if (currentOrder != null && currentOrder.getStatus().equals("READY TO COOK")){
+            Database.setOrderReady(currentOrder.getId());
+        }
+    }
+
+    public void ready(ActionEvent actionEvent) {setOrderReady();}
 }

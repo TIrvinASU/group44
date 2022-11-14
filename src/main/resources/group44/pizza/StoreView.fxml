@@ -5,7 +5,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane minHeight="400.0" minWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group44.pizza.StoreViewController">
+<AnchorPane minHeight="400.0" minWidth="500.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group44.pizza.StoreViewController">
    <children>
       <Pane layoutX="-1.0" layoutY="-1.0" prefHeight="400.0" prefWidth="500.0">
          <children>
@@ -20,7 +20,7 @@
                   <Font size="15.0" />
                </font></Label>
             <Button layoutX="296.0" layoutY="344.0" mnemonicParsing="false" onAction="#readyToCook" text="Send to Cook" />
-             <Button layoutX="404.0" layoutY="344.0" opacity="0.36" text="Ready"  />
+             <Button layoutX="404.0" layoutY="344.0" onAction="#ready" text="Ready" />
             <Label layoutX="222.0" layoutY="48.0" text="Store View">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
