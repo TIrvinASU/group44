@@ -1,5 +1,6 @@
 package group44.pizza;
 
+import group44.pizza.storage.AsuriteDB;
 import group44.pizza.storage.Database;
 import group44.pizza.storage.Order;
 import group44.pizza.storage.Persist;
@@ -11,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.text.Text;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
@@ -20,7 +22,8 @@ import java.util.ArrayList;
 public class PromptController {
     public Button submit;
     private String asuId = "";
-
+    @FXML
+    private Text errorText;
     @FXML
     public void promptStart(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Prompt.fxml"));
@@ -48,9 +51,14 @@ public class PromptController {
     }
 
     public void submitOrder() {
-        System.out.println("SUBMIT ORDER");
-        Database.addOrder(Persist.customerViewOrder);
-        Stage stage = (Stage) submit.getScene().getWindow();
-        stage.close();
+        if(AsuriteDB.isValidAsuId(this.asuId)) {
+            System.out.println("SUBMIT ORDER");
+            Database.addOrder(Persist.customerViewOrder);
+            Stage stage = (Stage) submit.getScene().getWindow();
+            stage.close();
+        }
+        else {
+            errorText.setVisible(true);
+        }
     }
 }

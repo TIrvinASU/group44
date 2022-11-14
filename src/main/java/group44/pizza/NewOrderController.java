@@ -10,6 +10,7 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.scene.control.MenuButton;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -92,13 +93,22 @@ public class NewOrderController {
         this.displayCurrentState();
     }
 
-    // I MADE ONE FOR EACH TIME SMH
-    public void set1200() {setTime("12:00pm");}
-    public void set100() {setTime("1:00pm");}
-    public void set200() {setTime("2:00pm");}
-    public void set300() {setTime("3:00pm");}
-    public void set400() {setTime("4:00pm");}
-    public void set500() {setTime("5:00pm");}
+    // To be able to update the time
+    @FXML
+    private MenuButton dropButton;
+    
+    public void set1200() {setTime("12:00pm");
+                          dropButton.setText("12:00pm");}
+    public void set100() {setTime("1:00pm");
+                         dropButton.setText("1:00pm");}
+    public void set200() {setTime("2:00pm");
+                         dropButton.setText("2:00pm");}
+    public void set300() {setTime("3:00pm");
+                         dropButton.setText("3:00pm");}
+    public void set400() {setTime("4:00pm");
+                         dropButton.setText("4:00pm");}
+    public void set500() {setTime("5:00pm");
+                         dropButton.setText("5:00pm");}
 
     private void setTime(String pickupTime) {
         this.pickupTime = pickupTime;

@@ -5,11 +5,10 @@ import java.util.Arrays;
 
 public class AsuriteDB {
     public static ArrayList<String> validIds = new ArrayList<String>(Arrays.asList(
-            "wchung25",
-            "urmum26",
+            "noeln",
             "tirvin",
-            "dhruvinmecrazy",
-            "supasexyboi"
+            "dhruv",
+            "sexyboi"
     ));
 
     public static boolean isValidAsuId(String asuId) {

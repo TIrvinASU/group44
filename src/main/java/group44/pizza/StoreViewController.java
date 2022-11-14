@@ -37,7 +37,7 @@ public class StoreViewController implements Initializable {
     @FXML
     private Label pizzaType;
 
-    String currentOrder;
+    Order currentOrder = null;
 
 
     @FXML
@@ -63,7 +63,7 @@ public class StoreViewController implements Initializable {
         orders.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Order>() {
             @Override
             public void changed(ObservableValue<? extends Order> observableValue, Order order, Order t1) {
-                System.out.println(t1);
+                currentOrder = t1;
                 asuid.setText(t1.getAsuID());
                 pizzaType.setText(t1.getPizzaType());
                 toppings.setText(String.join("\n", t1.getToppings()));
@@ -80,7 +80,7 @@ public class StoreViewController implements Initializable {
                     String text = "test";
                     setText(null);
                 } else {
-                    setText("Order: " + String.valueOf(order.getId() + 1));
+                    setText("Order: " + String.valueOf(order.getId() ));
                 }
             }
         });
@@ -96,16 +96,35 @@ public class StoreViewController implements Initializable {
             protected void updateItem(Order order, boolean empty) {
                 super.updateItem(order, empty);
                 if (empty) {
-                    String text = "test";
                     setText(null);
                 } else {
-                    setText("Order: " + String.valueOf(order.getId() + 1));
+                    setText("Order: " + String.valueOf(order.getId()));
                 }
             }
         });
     }
 
     public void setOrderReadyToCook() {
+        if (currentOrder != null){
+            Database.setOrderReadyToCook(currentOrder.getId());
+        }
+    }
+    
+    public void readyToCook(ActionEvent actionEvent) {
+        setOrderReadyToCook();
+    }
+    
+    public void setOrderReady() {
+        if (currentOrder != null && currentOrder.getStatus().equals("COOKING")){
+            Database.setOrderReady(currentOrder.getId());
+        }
+    }
 
+    public void ready(ActionEvent actionEvent) {setOrderReady();}
+
+    public void cooking(ActionEvent actionEvent) {
+        if (currentOrder != null && currentOrder.getStatus().equals("READY TO COOK")){
+            Database.setOrderCooking(currentOrder.getId());
+        }
     }
 }
