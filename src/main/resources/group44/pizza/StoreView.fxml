@@ -41,7 +41,7 @@
             <Label fx:id="toppings" alignment="TOP_LEFT" layoutX="373.0" layoutY="179.0" prefHeight="91.0" prefWidth="114.0" />
             <Label fx:id="asuid" layoutX="114.0" layoutY="313.0" prefHeight="17.0" prefWidth="114.0" />
             <Button layoutX="102.0" layoutY="63.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
-            <Button layoutX="348.0" layoutY="344.0" mnemonicParsing="false" text="Cooking" />
+            <Button layoutX="348.0" layoutY="344.0" mnemonicParsing="false" onAction="#cooking" text="Cooking" />
          </children>
       </Pane>
    </children>
