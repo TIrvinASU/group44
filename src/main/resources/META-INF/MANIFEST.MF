@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: 
+Class-Path: javafx-base-19-ea+7-win.jar javafx-base-19-ea+7.jar javafx-c
+ ontrols-19-ea+7.jar javafx-controls-19-ea+7-win.jar javafx-graphics-19-
+ ea+7-win.jar javafx-graphics-19-ea+7.jar javafx-fxml-19-ea+7.jar javafx
+ -fxml-19-ea+7-win.jar
+
