@@ -19,8 +19,8 @@
                <font>
                   <Font size="15.0" />
                </font></Label>
-            <Button layoutX="296.0" layoutY="344.0" mnemonicParsing="false" onAction="#readyToCook" text="Send to Cook" />
-             <Button layoutX="404.0" layoutY="344.0" onAction="#ready" text="Ready" />
+            <Button layoutX="238.0" layoutY="344.0" mnemonicParsing="false" onAction="#readyToCook" text="Send to Cook" />
+             <Button layoutX="430.0" layoutY="344.0" onAction="#ready" text="Ready" />
             <Label layoutX="222.0" layoutY="48.0" text="Store View">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
@@ -41,6 +41,7 @@
             <Label fx:id="toppings" alignment="TOP_LEFT" layoutX="373.0" layoutY="179.0" prefHeight="91.0" prefWidth="114.0" />
             <Label fx:id="asuid" layoutX="114.0" layoutY="313.0" prefHeight="17.0" prefWidth="114.0" />
             <Button layoutX="102.0" layoutY="63.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+            <Button layoutX="348.0" layoutY="344.0" mnemonicParsing="false" text="Cooking" />
          </children>
       </Pane>
    </children>
