@@ -1,4 +1,4 @@
-# Sun Devil's Pizza
+# Sun Devil's Pizza by Group 44
 
 For CSE360, we decided to make a program that simulates software that might run in a pizza store that serves ASU students.
 
@@ -9,3 +9,7 @@ For this assignment, we have to validate the user's ASU id by comparing it with 
 This is the list of acceptable ASU ids: noeln, tirvin, dhruv, sexyboi
 Any other ASU id will be rejected.
 Obviously, in production, all ASU ids will be acceptable.
+
+
+# Team Member
+Abhinav Sharma, Anirudh Ramasubramanian, Dhruv Samdani, Noel Ngu, Trevor Irvin, Woojeh Chung
